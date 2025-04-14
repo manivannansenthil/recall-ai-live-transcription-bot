@@ -10,7 +10,7 @@ This app enables a virtual transcription bot to join any Google Meet call and de
   1. A user submits a Google Meet link via the UI.
   2. The backend sends that link to the Recall.ai API, which spins up a bot that joins the meeting and begins transcribing.
   3. Transcription data — including speaker labels and timestamps — is sent from Recall.ai to a local webhook endpoint.
-  4. That data is then emitted to the frontend via a server-sent events (SSE) stream.
+  4. That data is then emitted to the frontend via a server-sent event (SSE) stream.
   5. The UI listens to this stream and displays live transcription updates as the meeting happens.
 
 ## 🛠️ Tech Stack / Requirements
