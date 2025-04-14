@@ -43,7 +43,7 @@ export default function TranscriptDisplay() {
   }, []);
 
   useEffect(() => {
-    // Auto-scroll to bottom with a small delay to ensure content is rendered
+    // Auto-scroll to bottom of TranscriptDisplay with a small delay to ensure content is rendered
     if (transcriptRef.current) {
       setTimeout(() => {
         if (transcriptRef.current) {
