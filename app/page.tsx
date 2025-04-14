@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       <div className="min-h-screen flex flex-col justify-center">
-        <div className="mb-40">
+        <div className="mb-20 mt-10">
           <h1 className="text-6xl font-bold font-sans text-center">
             Live Transcription Bot
           </h1>

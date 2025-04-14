@@ -59,7 +59,7 @@ export default function TranscriptDisplay() {
   return (
     <div
       ref={transcriptRef}
-      className="w-full max-w-4xl h-96 bg-[#f8f9fa] rounded-md shadow-md justify overflow-y-auto p-4"
+      className="w-full max-w-4xl h-80 bg-[#f8f9fa] rounded-md shadow-md justify overflow-y-auto p-4"
     >
       <div className="space-y-2">
         {transcriptions.length === 0 ? (
