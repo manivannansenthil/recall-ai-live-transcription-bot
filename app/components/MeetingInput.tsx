@@ -11,7 +11,6 @@ const MeetingURLInput = () => {
 
   // This function sends a POST request to the server with the meeting URL to create the transcription bot and handles the response.
   const handleStartRecording = async () => {
-
     // Check if the input value is empty
     if (!inputValue.trim()) {
       toast.error("Please enter a Google Meet URL", {
@@ -20,19 +19,18 @@ const MeetingURLInput = () => {
       });
       return;
     }
-    
-    // Updates loading state, disables input/button and sends POST request 
-    try {
 
+    // Updates loading state, disables input/button and sends POST request
+    try {
       setIsLoading(true);
 
-      // Send POST request to create bot
+      // Send POST request to "/api/start-recording" endpoint with the meeting URL
       const res = await fetch("/api/start-recording", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ meeting_url: inputValue }),
       });
-      
+
       // Store the response data
       const data = await res.json();
 

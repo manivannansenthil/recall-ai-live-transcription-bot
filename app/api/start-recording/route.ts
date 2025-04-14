@@ -1,13 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// This function handles the POST request to Recall.ai API to create a bot and start recording
 export async function POST(req: NextRequest) {
-    
-  // Get the environment variables
+  // Get the environment variables from .env.local
   const region = process.env.RECALL_REGION;
   const apiKey = process.env.RECALL_API_KEY;
-
-  console.log("Recall Region:", region);
-  console.log("Recall API Key:", apiKey);
 
   // Get the body of the request
   const body = await req.json();
@@ -29,6 +26,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Sends a POST request to the Recall.ai API
   try {
     const response = await fetch(`https://${region}.recall.ai/api/v1/bot/`, {
       method: "POST",
@@ -67,6 +65,7 @@ export async function POST(req: NextRequest) {
 
     const data = await response.json();
 
+    // Error handling
     if (!response.ok) {
       return NextResponse.json(
         { message: data?.error || "Failed to start recording" },
