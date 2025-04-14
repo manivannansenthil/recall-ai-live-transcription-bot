@@ -59,7 +59,7 @@ export default function TranscriptDisplay() {
   return (
     <div
       ref={transcriptRef}
-      className="w-full max-w-4xl h-96 bg-white rounded-md shadow-md justify overflow-y-auto p-4"
+      className="w-full max-w-4xl h-96 bg-[#f8f9fa] rounded-md shadow-md justify overflow-y-auto p-4"
     >
       <div className="space-y-2">
         {transcriptions.length === 0 ? (
@@ -70,7 +70,7 @@ export default function TranscriptDisplay() {
           transcriptions.map((transcript, index) => (
             <div
               key={index}
-              className={`p-2 rounded ${transcript.isPartial ? "bg-gray-100" : "bg-white"}`}
+              className={`p-2 rounded ${transcript.isPartial ? "bg-gray-100" : "bg-[#f8f9fa]"}`}
             >
               <div className="flex flex-col">
                 <span className="text-black font-semibold ml-2 text-xs">
