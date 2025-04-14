@@ -1,8 +1,9 @@
 "use client";
 
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import MeetingInput from "./components/MeetingInput";
-import "react-toastify/dist/ReactToastify.css";
+import TranscriptDisplay from "./components/TranscriptDisplay";
 
 // Homepage
 export default function Home() {
@@ -13,9 +14,12 @@ export default function Home() {
       </h1>
       <div className="text-center space-y-4">
         <MeetingInput />
-        <h2 className="text-xl text-whtie font-bold mb-4">
+        <h2 className="text-xl text-white underline mt-8 font-bold">
           Live Transcription
         </h2>
+        <div className="flex justify-center">
+          <TranscriptDisplay />
+        </div>
       </div>
       <ToastContainer
         position="top-center"

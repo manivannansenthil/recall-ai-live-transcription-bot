@@ -14,10 +14,9 @@ const eslintConfig = [
     ...compat.extends("next/core-web-vitals", "next/typescript"),
     rules: {
       "@typescript-eslint/no-explicit-any": "off", // disable annoying 'any' rule
-      "no-console": "warn",                        // or use "off" to fully disable
+      "no-console": "warn", // or use "off" to fully disable
     },
   },
 ];
-
 
 export default eslintConfig;

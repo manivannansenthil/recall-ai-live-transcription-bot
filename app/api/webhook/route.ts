@@ -10,8 +10,7 @@ export async function POST(req: NextRequest) {
 
     // Handle different types of transcription events
     if (event === "transcript.data" || event === "transcript.partial_data") {
-
-        // Parses the transcription data
+      // Parses the transcription data
       const transcriptData = data.data;
       const words = transcriptData.words
         .map((word: any) => word.text)

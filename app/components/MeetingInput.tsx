@@ -71,7 +71,7 @@ const MeetingURLInput = () => {
       <button
         onClick={handleStartRecording}
         disabled={isLoading || isRecording}
-        className={`relative px-4 py-2 rounded-md font-medium transition-all duration-200 ${
+        className={`relative bg-[#0d6dfc] px-4 py-2 rounded-md font-medium transition-all duration-200 ${
           isRecording
             ? "bg-gray-400 text-gray-100 cursor-not-allowed"
             : isLoading
