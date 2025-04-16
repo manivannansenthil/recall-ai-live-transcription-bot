@@ -5,6 +5,7 @@ export async function POST(req: NextRequest) {
   // Get the environment variables from .env.local
   const region = process.env.RECALL_REGION;
   const apiKey = process.env.RECALL_API_KEY;
+  const webhookUrl = process.env.STATIC_WEBHOOK_URL;
 
   // Get the body of the request
   const body = await req.json();
@@ -51,7 +52,7 @@ export async function POST(req: NextRequest) {
           realtime_endpoints: [
             {
               type: "webhook",
-              url: "https://flexible-narwhal-suitably.ngrok-free.app/api/webhook",
+              url: `${webhookUrl}/api/webhook`,
               events: [
                 "transcript.data",
                 "transcript.partial_data",

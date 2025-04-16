@@ -72,6 +72,6 @@ Create a .env.local file and provide these environment variables. Follow previou
 ```
 export RECALL_API_KEY={YOUR_RECALL_API_KEY}
 export RECALL_REGION={YOUR_RECALL_REGION}
-export NEXT_PUBLIC_BASE_URL={YOUR_STATIC_DOMAIN} 
+export STATIC_WEBHOOK_URL={YOUR_STATIC_WEBHOOK_URL} 
 ```
 
